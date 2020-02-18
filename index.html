@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en-us">
 <head>
   <meta charset="utf-8">
 
@@ -10,16 +10,26 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
+  <!-- Import JS files Here -->
+  <script src="js/scripts.js"></script>
+
+
+  <script>
+    // Start playing background audio
+    var audio = new Audio('Audio/01 Main Theme.mp3');
+    audio.play();
+
+  </script>
 </head>
 
-<body>
-  <script src="js/scripts.js"></script>
-  Hello, World.
 
-<script>
-  var audio = new Audio('Audio/01 Main Theme.mp3');
-  audio.play();
-</script>
+<body>
+  
+  Hello, World.
+  <canvas width="720" height="480" id="sndCanvas">
+    <p> your browser does not support the canvas tag...</p>
+  </canvas>
+
 
 </body>
 </html>
