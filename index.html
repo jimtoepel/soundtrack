@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
   <!-- Import JS files Here -->
-  <script src="js/scripts.js"></script>
-
-
-
+  <script src="js/canvas.js"></script>
+  <script src="./audio.js"></script>
 </head>
 
 
 <body>
 
-  <svg>
-    <rect id="box" x="0" y="0" width="50" height="50"/>
-  </svg>
+  <section id = "main">
+    <canvas id = "canvas" width="600" height="400">
+    </canvas>
+  </section>
+
   <p id = "date"></p>
   <p id = "hour"></p>
   <br>
@@ -37,6 +37,17 @@
     var now = new Date();
     document.getElementById("date").innerHTML = now;
     document.getElementById("hour").innerHTML = now.getHours();
+
+    // Write text to Canvas
+    function doFirst(){
+      var x = document.getElementById('canvas');
+      canvas = x.getContext('2d');
+
+      canvas.font="36px Tahoma";
+      canvas.textAlign="end";
+      canvas.strokeText("Hello", 300, 200);
+    }
+    window.addEventListener("load", doFirst, false);
   </script>
 
 </body>
