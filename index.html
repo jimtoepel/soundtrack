@@ -29,14 +29,18 @@
   Hello, World
   
   <script>
-    // Start playing background audio
-    var audio = new Audio('Audio/01 Main Theme.mp3');
-    audio.play();
-
     // Create date object
     var now = new Date();
     document.getElementById("date").innerHTML = now;
     document.getElementById("hour").innerHTML = now.getHours();
+
+    // Start playing background audio
+    var track = now.getHours() + ".mp3";
+    console.log(track);
+    var audio = new Audio('Audio/' + track);
+    audio.play();
+
+
 
     // Write text to Canvas
     function doFirst(){
